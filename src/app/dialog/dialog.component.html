@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Project 1 <button style="margin-left: 80%;" mat-icon-button (click)="closeDialog()"><mat-icon>close</mat-icon></button></h2>
+<mat-dialog-content style="text-align: center;">
+  <c-carousel>
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let slide of slides">
+        <img
+          alt="{{slide.title}}"
+          class="d-block"
+          loading="lazy"
+          width="600"
+          height="300"
+          src="{{slide.src}}"
+        />
+        <c-carousel-caption class="d-none d-md-block">
+          <h3>{{slide.title}}</h3>
+          <p>{{slide.subtitle}}</p>
+        </c-carousel-caption>
+      </c-carousel-item>
+    </c-carousel-inner>
+    <div>
+      <c-carousel-control style="display: inline-block;" [routerLink] caption="Previous" direction="prev"><mat-icon style="cursor: pointer;">chevron_left</mat-icon></c-carousel-control>
+      <c-carousel-control style="display: inline-block;" [routerLink] caption="Next" direction="next"><mat-icon style="cursor: pointer;">chevron_right</mat-icon></c-carousel-control>
+    </div>
+  </c-carousel>
+</mat-dialog-content>

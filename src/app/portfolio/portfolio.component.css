@@ -1,0 +1,11 @@
+p {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+}
+.example-card {
+  width: 30%;
+  margin: 10px;
+  box-shadow: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
